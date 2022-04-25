@@ -4,7 +4,8 @@ import { AppComponent } from './app.component';
 
 const routes: Routes = [
   {path: '', component: AppComponent},
-  { path: 'netmonet', loadChildren: ()=>import('./netmonet/netmonet.module').then (m => m.NetmonetModule) } //lazy-loading
+  { path: 'netmonet', loadChildren: ()=>import('./netmonet/netmonet.module').then (m => m.NetmonetModule) }, //lazy-loading
+  { path: 'fruits', loadChildren: ()=>import('./fruits/fruits.module').then (m => m.FruitsModule) }
 ];
 
 @NgModule({

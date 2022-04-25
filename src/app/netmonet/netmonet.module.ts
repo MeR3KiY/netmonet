@@ -6,7 +6,7 @@ import { EmplraddNetmonetComponent } from './components/emplradd-netmonet/emplra
 import { EmplrlistNetmonetComponent } from './components/emplrlist-netmonet/emplrlist-netmonet.component';
 import { Page1Component } from './pages/page1/page1.component';
 import { NetmonetRoutingModule } from './netmonet-routing.module';
-import { NetmonetComponent } from './netmonet/netmonet.component';
+import { NetmonetComponent } from './netmonet.component';
 import { FormsModule } from '@angular/forms';
 
 

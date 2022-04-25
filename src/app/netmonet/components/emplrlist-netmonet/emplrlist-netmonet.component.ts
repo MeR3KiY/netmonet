@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../../models/user.model';
-
+import { EmpladdNetmonetService } from '../../services/empladd.service';
 
 
 
@@ -11,31 +10,17 @@ import { User } from '../../models/user.model';
 })
 export class EmplrlistNetmonetComponent implements OnInit {
 
-  list: User[] = [];
+  emplList = this.empladdservice.getEmpl();
+  
 
-  constructor() { }
+  constructor(private empladdservice: EmpladdNetmonetService) { }
+
+  removeEmpl(i: number) {
+    this.empladdservice.removeEmpl(i);
+  }
 
   ngOnInit(): void {
-    const userA: User = {
-      name: 'Ann',
-      surname: 'Freid',
-      tel: '+7999123123'
-    }
-    this.list.push(userA);
-
-    const userB: User = {
-      name: 'Anna',
-      surname: 'Qwerty',
-      tel: '+7999123432'
-    }
-    this.list.push(userB);
-
-    const userC: User = {
-      name: 'Alla',
-      surname: 'Qergs',
-      tel: '+7999688894'
-    }
-    this.list.push(userB);
+   
   }
 
 }

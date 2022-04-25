@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { EmpladdNetmonetService } from '../../services/empladd-netmonet.service';
+import { EmpladdNetmonetService } from '../../services/empladd.service';
+
+
 
 
 @Component({
@@ -9,19 +11,26 @@ import { EmpladdNetmonetService } from '../../services/empladd-netmonet.service'
 })
 export class EmplraddNetmonetComponent implements OnInit {
 
-  User: any;
-  EmpladdNetmonetService: any;
+  name: any = '';
+  surname = '';
+  tel = '';
 
+  constructor(private empladdservice: EmpladdNetmonetService) { }
 
-  constructor() { }
-
-  saveUser() {
-    if(this.User) {
-      this.EmpladdNetmonetService.saveUser(this.User);
-      this.User = '';
+  save() {
+    if (this.name == '' || this.surname == '' || this.tel == '') {
+      alert ('Пожалуйста, введите вседанные.');
     } else {
-      alert ('Please add smthng')
+      this.empladdservice.AddEmpl(this.name, this.surname, this.tel);
+
+      this.cleaner();
     }
+  };
+
+  cleaner() {
+    return this.name = '',
+    this.surname = '',
+    this.tel = '';
   }
 
   ngOnInit(): void {

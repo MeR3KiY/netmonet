@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { NetmonetComponent } from './netmonet/netmonet.component';
+import { NetmonetComponent } from './netmonet.component';
 import { MainNetmonetComponent } from './pages/main-netmonet/main-netmonet.component';
 import { Page1Component } from './pages/page1/page1.component';
 
