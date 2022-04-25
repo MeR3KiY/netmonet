@@ -11,4 +11,5 @@ export class FruitService {
   getJoke() {
     return this.http.get('https://v2.jokeapi.dev/joke/Any?safe-mode');
   }
+
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { single } from 'rxjs';
 import { FruitService } from './services/fruit.service';
 
 @Component({
@@ -49,7 +50,14 @@ export class FruitsComponent implements OnInit {
 
   ];
 
+
+
   joke: any = null;
+/*
+    if (joke.type == single) {
+      return this.joke;
+    }
+  }*/
 
   constructor(private fruitService: FruitService) { }
 
