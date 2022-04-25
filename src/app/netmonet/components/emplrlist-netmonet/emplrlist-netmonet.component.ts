@@ -11,7 +11,8 @@ import { EmpladdNetmonetService } from '../../services/empladd.service';
 export class EmplrlistNetmonetComponent implements OnInit {
 
   emplList = this.empladdservice.getEmpl();
-  
+
+  userSearch: string = '';
 
   constructor(private empladdservice: EmpladdNetmonetService) { }
 
@@ -20,7 +21,7 @@ export class EmplrlistNetmonetComponent implements OnInit {
   }
 
   ngOnInit(): void {
-   
+
   }
 
 }

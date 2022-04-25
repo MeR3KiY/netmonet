@@ -8,6 +8,7 @@ import { Page1Component } from './pages/page1/page1.component';
 import { NetmonetRoutingModule } from './netmonet-routing.module';
 import { NetmonetComponent } from './netmonet.component';
 import { FormsModule } from '@angular/forms';
+import { SearchPipe } from './pipes/search.pipe';
 
 
 
@@ -18,7 +19,8 @@ import { FormsModule } from '@angular/forms';
     EmplraddNetmonetComponent,
     EmplrlistNetmonetComponent,
     Page1Component,
-    NetmonetComponent
+    NetmonetComponent,
+    SearchPipe
   ],
   imports: [
     CommonModule,
